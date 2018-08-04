@@ -64,7 +64,7 @@ loc_c0ec:
 loc_c0f3: // 使用CGImageSourceCreateWithData创建的CGImageSourceRef，创建图片时会进入该label
     rsi = r12;
     r12 = var_38;
-    rax = IIO_ReaderHandler::readerForBytes(r13, rsi, var_60, rcx, r14);    // 将ReaderHandler传入
+    rax = IIO_ReaderHandler::readerForBytes(r13, rsi, var_60, rcx, r14);    // 将ReaderHandler、图片data bytes等传入
     *(r12 + 0x48) = rax; // readerForBytes返回的值即为插件的handler，具体插件参考IIO_ReaderHandler::buildPluginList()
     if (rax != 0x0) {
             pthread_mutex_lock(r15);

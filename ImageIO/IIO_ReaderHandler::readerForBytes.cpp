@@ -3,7 +3,7 @@ int __ZN17IIO_ReaderHandler14readerForBytesEPKhmPK10__CFStringmb(int * arg0, lon
     rbx = arg4; // 文件大小
     r14 = arg3; // 使用CGImageSourceCreateWithData时，arg3为0
     r15 = arg2; // 图片文件的大小
-    r12 = arg1; // 保存char *, 如果图片数据为JPEG，那么该处的值为FFD8FFE1 158D4578 6966 （FFD8为JPEG文件的signature，4578 6966为Exif的ASCII码）
+    r12 = arg1; // 保存char *, 图片的bytes地址
     r13 = arg0; // ReaderHandler
     if (r14 == 0x0) goto loc_10cd76;    // 使用CGImageSourceCreateWithData创建CGImageSourceRef时，r14为0x0
 
